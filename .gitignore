@@ -23,6 +23,7 @@
 #Personal
 Instructions.tex
 *.html
+Thesis_bibliography.bib
 
 # Cache
 *_cache/
