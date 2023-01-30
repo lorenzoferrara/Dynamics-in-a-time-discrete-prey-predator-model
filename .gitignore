@@ -20,6 +20,9 @@
 # RStudio files
 .Rproj.user/
 
+#Personal
+Instructions.tex
+
 # Cache
 *_cache/
 *_files/

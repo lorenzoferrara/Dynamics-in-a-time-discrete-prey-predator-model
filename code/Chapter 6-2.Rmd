@@ -1,0 +1,252 @@
+---
+title: "R Notebook"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+	echo = FALSE,
+	cache = TRUE,
+	fig.align = "center",
+	warning = FALSE,
+	out.width = "70%",
+	tidy = TRUE,
+	tidy.opts = list(width.cutoff = 60)
+)
+library(knitr)
+library(plotly)
+```
+
+```{r}
+T = function(vector){
+  x=vector[1]
+  y=vector[2]
+  z=vector[3]
+  temp=c( mu*x*(1-x-y-z),
+          beta*y*(x-z),
+          gamma*y*z)
+  for(i in 1:3){
+    if(temp[i]<0)
+      temp[i]=0
+  }
+  if(x+y+z>1)
+    temp[1]=0
+  return(temp)
+}
+```
+
+beta=2.6
+```{r}
+mu=2.1
+gamma=6.5
+
+beta=2.6
+
+xyz = c(0.2, 0.02, 0.03)
+X01 = xyz[1]
+Y01 = xyz[2]
+Z01 = xyz[3]
+
+iterazioni=1e4
+for(i in 1:iterazioni){
+  xyz=T(xyz)
+  X01 = c(X01, xyz[1])
+  Y01 = c(Y01, xyz[2])
+  Z01 = c(Z01, xyz[3])
+}
+```
+
+```{r}
+# par(pty="s", mar=c(4,0,2.4,0))
+# plot(X01, Y01, pch=".", asp=1, xlab="x", ylab="y", type="l", ylim=c(0,max(Y01)), main = paste("beta = ", beta, sep=""))
+# points( (mu-1)/mu,0, col="orange",pch=16)
+# points( 1/beta, 1-1/mu-1/beta, col="green",pch=16)
+# points( (1-1/mu+1/beta-1/gamma)/2, 1/gamma, col="blue",pch=16)
+```
+
+
+beta=3
+```{r}
+mu=2.1
+gamma=6.5
+
+beta=3.1
+
+xyz = c(0.2, 0.05, 0.03)
+X02 = xyz[1]
+Y02 = xyz[2]
+Z02 = xyz[3]
+
+iterazioni=1e4
+for(i in 1:iterazioni){
+  xyz=T(xyz)
+  X02 = c(X02, xyz[1])
+  Y02 = c(Y02, xyz[2])
+  Z02 = c(Z02, xyz[3])
+}
+```
+
+```{r}
+par(pty="s", mar=c(4,0,2.4,0))
+plot(X02, Y02, pch=".", asp=1, xlab="x", ylab="y", type="l", ylim=c(0,max(Y02)), main = paste("beta = ", beta, sep=""))
+points( (mu-1)/mu,0, col="orange",pch=16)
+points( 1/beta, 1-1/mu-1/beta, col="green",pch=16)
+points( (1-1/mu+1/beta-1/gamma)/2, 1/gamma, col="blue",pch=16)
+```
+
+beta=3.52
+```{r}
+mu=2.1
+gamma=6.5
+
+beta=3.52
+
+xyz = c(0.2, 0.02, 0.03)
+X03 = xyz[1]
+Y03 = xyz[2]
+Z03 = xyz[3]
+
+iterazioni=1e4
+for(i in 1:iterazioni){
+  xyz=T(xyz)
+  X03 = c(X03, xyz[1])
+  Y03 = c(Y03, xyz[2])
+  Z03 = c(Z03, xyz[3])
+}
+```
+
+```{r}
+par(pty="s", mar=c(4,0,2.4,0))
+plot(X03, Y03, pch=".", asp=1, xlab="x", ylab="y", ylim=c(0,max(Y03)), main = paste("beta = ", beta, sep=""))
+points( (mu-1)/mu,0, col="orange",pch=16)
+points( 1/beta, 1-1/mu-1/beta, col="green",pch=16)
+points( (1-1/mu+1/beta-1/gamma)/2, 1/gamma, col="blue",pch=16)
+```
+
+beta=3.52
+```{r}
+mu=2.1
+gamma=6.5
+
+beta=3.7
+
+xyz = c(0.2, 0.02, 0.1)
+X031 = xyz[1]
+Y031 = xyz[2]
+Z031 = xyz[3]
+
+iterazioni=1e4
+for(i in 1:iterazioni){
+  xyz=T(xyz)
+  X031 = c(X031, xyz[1])
+  Y031 = c(Y031, xyz[2])
+  Z031 = c(Z031, xyz[3])
+}
+```
+
+```{r}
+par(pty="s", mar=c(4,0,2.4,0))
+plot(X031, Y031, pch=".", asp=1, xlab="x", ylab="y", ylim=c(0,max(Y031)), main = paste("beta = ", beta, sep=""))
+points( (mu-1)/mu,0, col="orange",pch=16)
+points( 1/beta, 1-1/mu-1/beta, col="green",pch=16)
+points( (1-1/mu+1/beta-1/gamma)/2, 1/gamma, col="blue",pch=16)
+```
+
+beta=3.89
+```{r}
+mu=2.1
+gamma=6.5
+
+beta=3.89
+
+xyz = c(0.2, 0.02, 0.03)
+X04 = xyz[1]
+Y04 = xyz[2]
+Z04 = xyz[3]
+
+iterazioni=1e4
+for(i in 1:iterazioni){
+  xyz=T(xyz)
+  X04 = c(X04, xyz[1])
+  Y04 = c(Y04, xyz[2])
+  Z04 = c(Z04, xyz[3])
+}
+```
+
+```{r}
+par(pty="s", mar=c(4,0,2.4,0))
+plot(X04, Y04, pch=".", asp=1, xlab="x", ylab="y", ylim=c(0,max(Y04)), main = paste("beta = ", beta, sep=""))
+points( (mu-1)/mu,0, col="orange",pch=16)
+points( 1/beta, 1-1/mu-1/beta, col="green",pch=16)
+points( (1-1/mu+1/beta-1/gamma)/2, 1/gamma, col="blue",pch=16)
+```
+
+
+```{r}
+plot_ly(x=X04, y=Y04, z=Z04, type="scatter3d", mode="markers", color=Z04, marker = list(size = 0.8))
+```
+
+
+```{r}
+mu=2.1
+gamma=6.5
+
+beta=4.5
+
+xyz = c(0.2, 0.02, 0.03)
+X041 = xyz[1]
+Y041 = xyz[2]
+Z041 = xyz[3]
+
+iterazioni=1e4
+for(i in 1:iterazioni){
+  xyz=T(xyz)
+  X041 = c(X041, xyz[1])
+  Y041 = c(Y041, xyz[2])
+  Z041 = c(Z041, xyz[3])
+}
+```
+
+```{r}
+par(pty="s", mar=c(4,0,2.4,0))
+plot(X041, Y041, pch=".", asp=1, xlab="x", ylab="y", ylim=c(0,max(Y041)), main = paste("beta = ", beta, sep=""))
+points( (mu-1)/mu,0, col="orange",pch=16)
+points( 1/beta, 1-1/mu-1/beta, col="green",pch=16)
+points( (1-1/mu+1/beta-1/gamma)/2, 1/gamma, col="blue",pch=16)
+```
+
+beta=4.99
+```{r}
+mu=2.1
+gamma=6.5
+
+beta=4.99
+
+xyz = c(0.2, 0.02, 0.03)
+X05 = xyz[1]
+Y05 = xyz[2]
+Z05 = xyz[3]
+
+iterazioni=1e4
+for(i in 1:iterazioni){
+  xyz=T(xyz)
+  X05 = c(X05, xyz[1])
+  Y05 = c(Y05, xyz[2])
+  Z05 = c(Z05, xyz[3])
+}
+```
+
+```{r}
+par(pty="s", mar=c(4,0,2.4,0))
+plot(X05, Y05, pch=".", asp=1, xlab="x", ylab="y", ylim=c(0,max(Y05)), main = paste("beta = ", beta, sep=""))
+points( (mu-1)/mu,0, col="orange",pch=16)
+points( 1/beta, 1-1/mu-1/beta, col="green",pch=16)
+points( (1-1/mu+1/beta-1/gamma)/2, 1/gamma, col="blue",pch=16)
+```
+
+
+
+
+
+
+
+
