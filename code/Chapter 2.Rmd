@@ -20,7 +20,6 @@ library(maptools)
 library(spatstat)
 ```
 
-
 ```{r BASE TOOLS, warning=FALSE}
 rm(list=ls())
 
@@ -44,6 +43,12 @@ T = function(vector){
   return(temp)
 }
 
+is.outside = function(vector){
+  if(vector[1]<0 | vector[2]<0 | vector[3]<0 | sum(vector)>1)
+    return(1)
+  else
+    return(0)
+}
 
 N=2000
 valori.x = (1:N)/N
@@ -102,6 +107,26 @@ plot(grafico,axis=T, main=paste("mu=",mu, " and beta=", beta, sep=""))
 ```
 
 Plot population behavior
+```{R }
+mu=3.5
+beta=4.5
+
+
+series=matrix(data=c(0.25, 0.39, 0), nrow = 1) 
+
+for (n in 1:num_iterazioni) {
+  series=rbind(series, T(series[n,]))
+  if( sum(series[n+1,])==0 )
+    break
+}
+
+plot(1:length(series[,1]), series[,1], ylim=c(0,1), col="blue", type="b", xlab="iteration", ylab="density", lwd=2)
+lines(1:length(series[,2]), series[,2], ylim=c(0,1), col="orange", type="b", lwd=2)
+lines(1:length(series[,3]), series[,3], ylim=c(0,1), col="green", type="b", lwd=2)
+legend("topleft", legend = c("x", "y", "z"), col=c("blue", "orange", "green"), lwd=2)
+
+```
+
 ```{R}
 mu=3.5
 beta=4.5
@@ -129,9 +154,26 @@ plot(grafico,axis=T, main=paste("mu=",mu, " and beta=", beta, sep=""))
 ```
 
 Plot population behavior
-```{R}
+```{R }
 mu=2.5
 beta=5
+
+series=matrix(data=c(0.25, 0.39, 0), nrow = 1) 
+
+for (n in 1:num_iterazioni) {
+  series=rbind(series, T(series[n,]))
+  if( sum(series[n+1,])==0 )
+    break
+}
+
+plot(1:length(series[,1]), series[,1], ylim=c(0,1), col="blue", type="b", xlab="iteration", ylab="density", lwd=2)
+lines(1:length(series[,2]), series[,2], ylim=c(0,1), col="orange", type="b", lwd=2)
+lines(1:length(series[,3]), series[,3], ylim=c(0,1), col="green", type="b", lwd=2)
+legend("topleft", legend = c("x", "y", "z"), col=c("blue", "orange", "green"), lwd=2)
+
+```
+
+```{R}
 
 grid.3 = matrix(NA, N, N)
 for (i in 1:N) {
@@ -158,37 +200,6 @@ plot(grafico,axis=T, main=paste("mu=",mu, " and beta=", beta, sep=""))
 ```{r}
 save.image(".RData")
 ```
-
-```{r}
-mu=0.7
-beta=4.5
-
-grid.1 = matrix(NA, N, N)
-for (i in 1:N) {
-  for (j in 1:(N+1-i)) {
-    series=c(i/N, j/N, 0)
-
-    for (n in 1:num_iterazioni) {
-      series=T(series)
-      if( is.outside(series) ){
-        break
-      }
-    }
-    grid.1[i,j]=n
-  }
-}
-```
-
-```{r}
-grafico<-im(t(grid.1),valori.x,valori.y)
-par(mar=c(0,0,2,0))
-plot(grafico,axis=T, main=paste("mu=",mu, " and beta=", beta, sep=""))
-```
-
-
-
-
-
 
 Plot population behavior
 ```{R }

@@ -16,7 +16,6 @@ knitr::opts_chunk$set(
 	tidy.opts = list(width.cutoff = 60)
 )
 library(knitr)
-library(plotly)
 ```
 
 ```{r}
