@@ -4,54 +4,14 @@
 
 <p align="left"> Team members:
 <ul>
-  <li>Lorenzo Ferrara (<a href="https://github.com/lorenzoferrara/" target="_blank">Github</a>, <a href="https://www.w3schools.com/" target="_blank">Linkedin</a>) </li> 
+  <li>Lorenzo Ferrara (<a href="https://github.com/lorenzoferrara/" target="_blank">Github</a>, <a href="https://www.linkedin.com/in/lorenzo-ferrara-567211244/" target="_blank">Linkedin</a>) </li> 
   <li>Sofia Raschi</li>
 </ul>
 </p>
 
-<h3 align="left">Languages and Tools:</h3>
-<p align="left"> <a href="https://www.cprogramming.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" alt="c" width="40" height="40"/> </a> </p>
+<h3 align="left">Description:</h3>
+<p align="left">This project aims to examine a discrete-time dynamical system that models the population dynamics of three interacting species x, y and z, with non-overlapping generations, analyzing the conditions that lead to species extinction and those that result in stabilization on periodic orbits, using advanced mathematical
+techniques. This involves studying the stability of equilibrium points, or the existence and stability of periodic solutions. We also use numerical methods to simulate the dynamics of the system and study its behaviour under different initial conditions and parameter values. Overall, this project will provide a deeper understanding of complex ecological interactions between multiple species. </p>
 
-
-This is the name of the project. It describes the whole project in one sentence, and helps people understand what the main goal and aim of the project is.
-
-2. Project Description
-This is an important component of your project that many new developers often overlook.
-
-Your description is an extremely important aspect of your project. A well-crafted description allows you to show off your work to other developers as well as potential employers.
-
-The quality of a README description often differentiates a good project from a bad project. A good one takes advantage of the opportunity to explain and showcase:
-
-What your application does,
-Why you used the technologies you used,
-Some of the challenges you faced and features you hope to implement in the future.
-3. Table of Contents (Optional)
-If your README is very long, you might want to add a table of contents to make it easy for users to navigate to different sections easily. It will make it easier for readers to move around the project with ease.
-
-4. How to Install and Run the Project
-If you are working on a project that a user needs to install or run locally in a machine like a "POS", you should include the steps required to install your project and also the required dependencies if any.
-
-Provide a step-by-step description of how to get the development environment set and running.
-
-5. How to Use the Project
-Provide instructions and examples so users/contributors can use the project. This will make it easy for them in case they encounter a problem – they will always have a place to reference what is expected.
-
-You can also make use of visual aids by including materials like screenshots to show examples of the running project and also the structure and design principles used in your project.
-
-Also if your project will require authentication like passwords or usernames, this is a good section to include the credentials.
-
-6. Include Credits
-If you worked on the project as a team or an organization, list your collaborators/team members. You should also include links to their GitHub profiles and social media too.
-
-Also, if you followed tutorials or referenced a certain material that might help the user to build that particular project, include links to those here as well.
-
-This is just a way to show your appreciation and also to help others get a first hand copy of the project.
-
-7. Add a License
-For most README files, this is usually considered the last part. It lets other developers know what they can and cannot do with your project.
-
-We have different types of licenses depending on the kind of project you are working on. Depending on the one you will choose it will determine the contributions your project gets.
-
-The most common one is the GPL License which allows other to make modification to your code and use it for commercial purposes. If you need help choosing a license, use check out this link: https://choosealicense.com/
-
-Up to this point what we have covered are the minimum requirements for a good README. But you might also want to consider adding the following sections to m
+<h3 align="left">References:</h3>
+<p align="left">Our analysis is based on the research paper entitled "Dynamics in a Time-Discrete Food-Chain Model with Strong Pressure on Preys" by Ll. Alsedà, B. Vidiella, R. Solé, J.T. Lázaro, and J. Sardanyés, as presented in the content available on this GitHub repository.</p>
