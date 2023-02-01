@@ -5,7 +5,7 @@
 <p align="left"> Team members:
 <ul>
   <li>Lorenzo Ferrara (<a href="https://github.com/lorenzoferrara/" target="_blank">Github</a>, <a href="https://www.linkedin.com/in/lorenzo-ferrara-567211244/" target="_blank">Linkedin</a>) </li> 
-  <li>Sofia Raschi</li>
+  <li>Sofia Raschi (<a href="https://github.com/Sofy9922/" target="_blank">Github</a>, <a href="https://www.linkedin.com/in/sofia-raschi/" target="_blank">Linkedin</a>)</li>
 </ul>
 </p>
 
