@@ -1,4 +1,4 @@
-<h1 align="center"> Dynamics in a time discrete prey predator model </h1>
+<h1 align="left"> Dynamics in a time discrete prey predator model </h1>
 
 <h4 align="left">Project for the course of Quantitative and Qualitative methods for Dynamical Systems at Universitat Politecnica de Catalunya, 2022/2023</h4>
 
